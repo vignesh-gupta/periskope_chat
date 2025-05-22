@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
-import { Separator } from "./ui/separator";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 import { AiFillHome } from "react-icons/ai";
 import { BsChatDotsFill, BsFillDiagram2Fill } from "react-icons/bs";
@@ -37,7 +37,7 @@ const navItems: (
 
 const FeatureSidebar = () => {
   return (
-    <div className="fixed left-0 top-0 bottom-0 w-14 py-2 flex flex-col items-center bg-white border-r">
+    <nav className="absolute left-0 top-0 bottom-0 w-14 py-2 flex flex-col items-center bg-white border-r min-h-screen">
       <Image
         src="/logo.jpg"
         alt="Logo"
@@ -74,7 +74,7 @@ const FeatureSidebar = () => {
           );
         })}
       </div>
-    </div>
+    </nav>
   );
 };
 
